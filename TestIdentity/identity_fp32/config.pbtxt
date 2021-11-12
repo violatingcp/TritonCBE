@@ -1,10 +1,10 @@
 name: "identity_fp32"
 backend: "identity"
 max_batch_size: 20
-#dynamic_batching { 
-# preferred_batch_size : 10 
-# max_queue_delay_microseconds: 50000
-#}
+dynamic_batching { 
+ preferred_batch_size : 10 
+ max_queue_delay_microseconds: 10000
+}
 input [
   {
     name: "input"
